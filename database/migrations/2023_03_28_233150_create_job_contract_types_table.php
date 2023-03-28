@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('job_contract_types', function (Blueprint $table) {
             $table->id();
-            $table->name('name');
+            $table->string('name');
             $table->timestamps();
         });
     }
