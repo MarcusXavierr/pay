@@ -15,6 +15,16 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    @if(auth()->user()->hasRole('admin'))
+                      <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                          {{ __('Manage Job Posts') }}
+                      </x-nav-link>
+
+                      <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                          {{ __('Manage Candidates') }}
+                      </x-nav-link>
+                    @endif
                 </div>
             </div>
 
