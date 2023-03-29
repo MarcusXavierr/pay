@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\JobContractType;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,6 +20,7 @@ class JobPostFactory extends Factory
         return [
             'title' => fake()->name(),
             'description' => fake()->text(),
+            'job_contract_type_id' => JobContractType::all()->random()->id,
         ];
     }
 }
