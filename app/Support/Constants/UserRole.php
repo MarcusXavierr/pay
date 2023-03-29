@@ -2,7 +2,7 @@
 
 namespace App\Support\Constants;
 
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Support\Collection;
 
 class UserRole
 {
