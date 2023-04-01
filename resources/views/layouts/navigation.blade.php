@@ -17,12 +17,12 @@
                     </x-nav-link>
 
                     @if(auth()->user()->hasRole('admin'))
-                      <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                          {{ __('Manage Job Posts') }}
+                      <x-nav-link :href="route('manage-job-posts.index')" :active="request()->routeIs('manage-job-posts.index')">
+                          {{ __('Gerenciar Vagas de emprego') }}
                       </x-nav-link>
 
                       <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                          {{ __('Manage Candidates') }}
+                          {{ __('Gerenciar Candidatos') }}
                       </x-nav-link>
                     @endif
                 </div>
