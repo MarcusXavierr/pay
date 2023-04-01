@@ -5,23 +5,23 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
+    <div class="py-12 container mx-auto">
       <!-- create.blade.php -->
-      <form action="{{ route('manage-job-posts.store') }}" method="POST">
+      <form action="{{ route('manage-job-posts.store') }}" method="POST" data-theme="light" class="p-10 flex flex-col gap-4">
         @csrf
-        <div>
-          <label for="title">Título:</label>
-          <input type="text" id="title" name="title">
+        <div class="form-control">
+          <label for="title" class="label"><span class="label-text">Titulo</span></label>
+          <input type="text" id="title" name="title" class="input input-bordered w-full max-w-xs">
         </div>
 
-        <div>
-          <label for="description">Descrição:</label>
-          <textarea id="description" name="description"></textarea>
+        <div class="form-control">
+          <label for="description" class="label"><span class="label-text">Descrição</span></label>
+          <textarea id="description" name="description" class="textarea textarea-bordered"></textarea>
         </div>
 
-        <div>
-          <label for="job_category">Categoria:</label>
-          <select id="job_category" name="job_category">
+        <div class="form-control">
+          <label for="job_category" class="label"><span class="label-text">Categoria</span></label>
+          <select id="job_category" name="job_contract_type_id" class="select select-bordered w-full max-w-xs">
             @foreach ($jobCategories as $category)
               <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
@@ -29,7 +29,7 @@
         </div>
 
         <div>
-          <button type="submit">Criar</button>
+          <button type="submit" class="btn btn-primary">Criar</button>
         </div>
       </form>
     </div>
