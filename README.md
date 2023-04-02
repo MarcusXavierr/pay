@@ -43,10 +43,6 @@ cp .env.example .env
 ```shell
 ./vendor/bin/sail artisan db:seed
 ```
-7. E por fim, rode a suite de testes para ver que está tudo ok
-```shell
-./vendor/bin/sail artisan test
-```
 caso o container do laravel não consiga se conectar no container do mysql, espere alguns um pouco e tente novamente.
 Na minha experiência o container do banco de dados demorava um pouco ficar acessível pelo container do laravel na primeira vez que rodava. Nas próximas vezes já vai funcionar instântaneamente
 
