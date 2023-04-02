@@ -18,7 +18,7 @@ docker run --rm \
 ```
 2. Copie o .env.example como seu arquivo .env
 
-```shell
+```sh
 cp .env.example .env
 
 ```
@@ -34,20 +34,24 @@ cp .env.example .env
 ```
 5. Após subir o container será preciso rodar as migrations
 
-```shell
+```sh
 ./vendor/bin/sail artisan migrate:refresh
 ```
 6. depois rodar a seeder que irá gerar o usuário admin `teste@example.com` com a senha `password`
-```shell
+```sh
 ./vendor/bin/sail artisan db:seed
 ```
 7. Instale os pacotes do npm
 ```sh
 ./vendor/bin/sail npm install
 ```
-8. E por fim, roda o npm para buildar os assets
+8. Rode o npm para buildar os assets
 ```sh
 ./vendor/bin/sail npm run build
+```
+9. E por fim, rode os testes para verificar se está tudo ok
+```sh
+./vendor/bin/sail test
 ```
 caso o container do laravel não consiga se conectar no container do mysql, espere alguns um pouco e tente novamente.
 Na minha experiência o container do banco de dados demorava um pouco ficar acessível pelo container do laravel na primeira vez que rodava. Nas próximas vezes já vai funcionar instântaneamente
