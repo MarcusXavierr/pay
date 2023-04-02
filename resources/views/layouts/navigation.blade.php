@@ -21,7 +21,7 @@
                           {{ __('Gerenciar Vagas de emprego') }}
                       </x-nav-link>
 
-                      <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                      <x-nav-link :href="route('candidates.index')" :active="request()->routeIs('candidates.index')">
                           {{ __('Gerenciar Candidatos') }}
                       </x-nav-link>
                     @endif
