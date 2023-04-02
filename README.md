@@ -23,21 +23,27 @@ docker run --rm \
 ```docker
 ./vendor/bin/sail up -d
 ```
-3. Será preciso gerar a key da aplicação
+3. Copie o .env.example como seu arquivo .env
+
+```shell
+cp .env.example .env
+```
+
+4. Será preciso gerar a key da aplicação
 
 ```docker
 ./vendor/bin/sail artisan key:generate
 ```
-4. Após subir o container será preciso rodar as migrations
+5. Após subir o container será preciso rodar as migrations
 
 ```shell
 ./vendor/bin/sail artisan migrate
 ```
-5. depois rodar a seeder que irá gerar o usuário admin `teste@example.com` com a senha `password`
+6. depois rodar a seeder que irá gerar o usuário admin `teste@example.com` com a senha `password`
 ```shell
 ./vendor/bin/sail artisan db:seed
 ```
-6. E por fim, rode a suite de testes para ver que está tudo ok
+7. E por fim, rode a suite de testes para ver que está tudo ok
 ```shell
 ./vendor/bin/sail artisan test
 ```
