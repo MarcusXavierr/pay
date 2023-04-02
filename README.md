@@ -57,4 +57,4 @@ caso o container do laravel não consiga se conectar no container do mysql, espe
 Na minha experiência o container do banco de dados demorava um pouco ficar acessível pelo container do laravel na primeira vez que rodava. Nas próximas vezes já vai funcionar instântaneamente
 
 ## Informações
-A aplicação estará rodando na porta 80, então basta acessar [o localhost](http://localhost) e clicar em login para começar a usar a aplicação
+A aplicação estará rodando na porta 80, então basta acessar [o localhost](http://localhost) e clicar em login para começar a usar a aplicação. O usuário admin padrão tem o email `teste@example.com` e senha `password`
