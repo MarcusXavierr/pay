@@ -2,8 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Support\Constants\UserRole;
+use App\Models\Candidate;
 use Illuminate\Database\Seeder;
 
 class CandidateSeeder extends Seeder
@@ -13,8 +12,6 @@ class CandidateSeeder extends Seeder
      */
     public function run(): void
     {
-        User::factory(10)->create()->each(function ($candidate) {
-            $candidate->assignRole(UserRole::CANDIDATE);
-        });
+        Candidate::factory(10)->create();
     }
 }
