@@ -18,17 +18,17 @@ docker run --rm \
     composer install --ignore-platform-reqs
 
 ```
-2. Logo depois será preciso subir os containers
+2. Copie o .env.example como seu arquivo .env
+
+```shell
+cp .env.example .env
+
+```
+3. Logo depois será preciso subir os containers
 
 ```docker
 ./vendor/bin/sail up -d
 ```
-3. Copie o .env.example como seu arquivo .env
-
-```shell
-cp .env.example .env
-```
-
 4. Será preciso gerar a key da aplicação
 
 ```docker
