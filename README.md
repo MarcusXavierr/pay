@@ -1,11 +1,9 @@
 # Projeto de Gerenciamento de Vagas de emprego
 Esse projeto consiste em um CRUD de vagas de empregos e candidatos, que permitem ao user autênticado adicionar gerenciar vagas e candidatos.
 
-O setup é feito com docker, então é preciso ter o docker instalado e rodando na máquina. Logo após isso
+O setup é feito com docker, então é preciso ter o docker instalado e rodando na máquina.
 
-Será necessário prencher os campos do banco de dados no arquivo .env (o docker-compose precisa dessas variaveis para criar o banco de dados), e também é necessario preencher os campos USER e UID no final do .env, que são o nome do user e o ID dele.
-
-O projeto usa PHP 8 e MySQL 5.7.
+O projeto usa PHP 8.2
 
 ## Setup
 1. Primeiro é necessário baixar as dependencias para rodar o sail, então rode o comando abaixo
