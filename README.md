@@ -37,7 +37,7 @@ cp .env.example .env
 5. Após subir o container será preciso rodar as migrations
 
 ```shell
-./vendor/bin/sail artisan migrate
+./vendor/bin/sail artisan migrate:refresh
 ```
 6. depois rodar a seeder que irá gerar o usuário admin `teste@example.com` com a senha `password`
 ```shell
